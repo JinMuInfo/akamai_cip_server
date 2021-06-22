@@ -1,6 +1,7 @@
 # Check IP (Django)
 
 Lookup IP to location server via Akamai EdgeScape
+
 [中文](./README.md)
 
 ## 1. Enviourment Required
@@ -26,6 +27,7 @@ Lookup IP to location server via Akamai EdgeScape
    | Hostname        | SSL/TLS | IP      | URL     |
    | :-------------- | :------ | :------ | :------ |
    | cip.example.com | Y       | 1.1.1.1 | <http://cip.example.com/es?ip=1.1.1.1> |
+
    Result:
 
    ``` Shell
@@ -36,3 +38,7 @@ Lookup IP to location server via Akamai EdgeScape
 7. Edit service file which reffer to _**ini/django-cip.sample.service**_ and copy to your systemd path;
 8. Start cip with systemd service and config boot-start if you want.
 9. Cheers.
+
+## 4. Notes
+
+There are no settings.py in this repo for security reason!!!

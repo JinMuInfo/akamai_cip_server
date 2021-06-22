@@ -1,6 +1,7 @@
 # Check IP (Django)
 
 用以IP地理位置定位的 Akamai EdgeScape 的 CIP Server, 搭配 cip Client 食用风味更佳
+
 [English](./README_en.md)
 
 ## 1. 环境
@@ -26,6 +27,7 @@
    | 域名        | SSL/TLS | IP      | URL     |
    | :-------------- | :------ | :------ | :------ |
    | cip.example.com | Y       | 1.1.1.1 | <http://cip.example.com/es?ip=1.1.1.1> |
+
    结果:
 
    ``` Shell
@@ -36,3 +38,7 @@
 7. 根据 _**ini/django-cip.sample.service**_ 编辑一个 systemd service 文件, 并保存到 systemd 目录里;
 8. 使用 systemd 服务启动, 可选性的设置开机启动;
 9. 结束.
+
+## 4. 备注
+
+出于安全因素考虑, 本仓库中不包含 settings.py 文件!!!
