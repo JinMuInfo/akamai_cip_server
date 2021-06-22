@@ -1,0 +1,21 @@
+[Unit]
+Description=Edgescape CIP Service
+After=network.target
+Wants=network.target
+
+[Service]
+# Change user here which surrounded by {{}}
+User={{user}}
+Type=forking
+# Change variables related to your cip environment surrounded by {{}}
+WorkingDirectory={{path_to_cip}}
+ExecStart=/usr/local/bin/uwsgi --ini {{path_to_cip_config}}
+ExecReload=/usr/local/bin/uwsgi --reload {{path_to_cip_pid}}
+Restart=always
+RestartSec=5s
+KillMode=mixed
+StandardOutput=file:{{path_to_output_log}}
+StandardError=file:{{path_to_error_log}}
+
+[Install]
+WantedBy=multi-user.target
